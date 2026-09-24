@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@layer utilities {
+    [x-cloak] {
+        display: none !important;
+    }
+}
+@source inline("flex items-center gap-2 rounded-lg border p-4 dark:bg-black hover:bg-gray-100 sm:flex 2xl:p-4 group-hover:flex peer-checked:block [&_p]:m-0 animate-spin space-y-6 text-red-500/50");

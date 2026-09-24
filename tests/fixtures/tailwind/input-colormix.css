@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@theme {
+    --color-brand: oklch(0.6 0.2 250);
+    --color-brand-hover: color-mix(in oklab, var(--color-brand) 90%, black);
+}
+@source inline("bg-brand hover:bg-brand-hover text-white p-4");

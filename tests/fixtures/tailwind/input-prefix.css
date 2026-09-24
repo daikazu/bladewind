@@ -1,0 +1,2 @@
+@import "tailwindcss" prefix(tw);
+@source inline("tw:flex tw:animate-spin tw:gap-2 tw:border tw:p-4 tw:hover:bg-gray-100");

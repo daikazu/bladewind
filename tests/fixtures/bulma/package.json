@@ -1,0 +1,11 @@
+{
+    "name": "bladewind-bulma-fixture",
+    "private": true,
+    "description": "Regenerates tests/fixtures/public-bulma from the Bulma npm package's own minified build. The output is committed; the suite never runs this.",
+    "scripts": {
+        "build": "node build.mjs"
+    },
+    "devDependencies": {
+        "bulma": "^1.0"
+    }
+}

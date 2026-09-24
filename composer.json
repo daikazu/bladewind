@@ -1,0 +1,51 @@
+{
+    "name": "daikazu/bladewind",
+    "description": "Laravel-aware compile-time analyzer and optimizer for Blade and Tailwind CSS.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        { "name": "Mike Wall", "email": "daikazu@gmail.com" }
+    ],
+    "require": {
+        "php": "^8.4",
+        "ext-zlib": "*",
+        "fortephp/forte": "^1.1",
+        "laravel/framework": "^13.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.11",
+        "laravel/pint": "^1.27",
+        "livewire/blaze": "^1.0",
+        "livewire/livewire": "^4.4",
+        "orchestra/testbench": "^11.2",
+        "pestphp/pest": "^5.1"
+    },
+    "autoload": {
+        "psr-4": { "Daikazu\\BladeWind\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Daikazu\\BladeWind\\Tests\\": "tests/",
+            "App\\": "tests/fixtures/app/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["Daikazu\\BladeWind\\BladeWindServiceProvider"]
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@prepare",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "test": "vendor/bin/pest",
+        "lint": "vendor/bin/pint",
+        "analyse": "vendor/bin/phpstan analyse",
+        "fixtures": "sh tests/fixtures/build-all.sh"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": { "pestphp/pest-plugin": true }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

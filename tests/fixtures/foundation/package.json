@@ -1,0 +1,11 @@
+{
+    "name": "bladewind-foundation-fixture",
+    "private": true,
+    "description": "Regenerates tests/fixtures/public-foundation from the Foundation for Sites npm package's own minified build. The output is committed; the suite never runs this.",
+    "scripts": {
+        "build": "node build.mjs"
+    },
+    "devDependencies": {
+        "foundation-sites": "^6.9"
+    }
+}

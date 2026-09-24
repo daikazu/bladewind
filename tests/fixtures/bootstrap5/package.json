@@ -1,0 +1,11 @@
+{
+    "name": "bladewind-bootstrap5-fixture",
+    "private": true,
+    "description": "Regenerates tests/fixtures/public-bootstrap5 from the Bootstrap npm package's own minified build. The output is committed; the suite never runs this.",
+    "scripts": {
+        "build": "node build.mjs"
+    },
+    "devDependencies": {
+        "bootstrap": "^5.3"
+    }
+}

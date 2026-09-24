@@ -1,0 +1,16 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: max
+    paths:
+        - src
+    tmpDir: .phpstan.cache
+    scanFiles:
+        - stubs/brotli.php
+    # AssertsPageStyles is consumed by host application test suites and by tests/, neither of
+    # which `paths` above analyses, so PHPStan never sees a use-site for it.
+    ignoreErrors:
+        -
+            identifier: trait.unused
+            path: src/Testing/AssertsPageStyles.php
